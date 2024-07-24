@@ -1,6 +1,10 @@
+{{ $sudo := "sudo  " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{     $sudo = "" -}}
+{{ end -}}
 #! /bin/bash
 
-sudo apt install -yy tmux
+{{ $sudo }} apt install -yy tmux
 
 # oh-my-tmux handle in .chezmoiexternal.toml.tmpl
 # if [ ! -d ~/.tmux ]; then

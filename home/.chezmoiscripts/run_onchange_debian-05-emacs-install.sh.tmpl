@@ -1,6 +1,10 @@
+{{ $sudo := "sudo  " -}}
+{{ if eq .chezmoi.username "root" -}}
+{{     $sudo = "" -}}
+{{ end -}}
 #! /bin/bash
 
-sudo apt install -yy \
+{{ $sudo }} apt install -yy \
      emacs \
 	   libsqlite3-dev \
      libtool-bin \
