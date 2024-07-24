@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo apt -yy install tmux
+sudo apt install -yy tmux
 
 # oh-my-tmux handle in .chezmoiexternal.toml.tmpl
 # if [ ! -d ~/.tmux ]; then

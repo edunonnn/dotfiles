@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo apt -yy install zsh
+sudo apt install -yy zsh
 
 [ "$(basename ${SHELL})" != "zsh" ] && sudo chsh -s $(which zsh) $(id -un)
 
