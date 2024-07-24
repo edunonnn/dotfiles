@@ -1,0 +1,15 @@
+#! /bin/bash
+
+sudo apt install -yy \
+     emacs \
+	   libsqlite3-dev \
+     libtool-bin \
+     xinput
+
+# libsqlite3-dev: for emacs magit
+# libtool-bin: for emacs vterm
+# xinput: Prevent triggering control char. from trackpoint
+
+# Spacemacs handles in .chezmoiexternal.toml.tmpl
+# Spacemacs with emacs28
+# git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
