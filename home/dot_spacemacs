@@ -649,6 +649,12 @@ before packages are loaded."
   (bind-key "\C-e" 'evil-end-of-line evil-replace-state-map)
   (bind-key "\C-e" 'evil-end-of-line evil-evilified-state-map)
 
+  ;; Drug N lines up/down as well as LeetCode hotkey
+  (define-key evil-visual-state-map (kbd "M-<down>") 'spacemacs/drag-stuff-transient-state/drag-stuff-down)
+  (define-key evil-visual-state-map (kbd "M-<up>") 'spacemacs/drag-stuff-transient-state/drag-stuff-up)
+  (define-key evil-normal-state-map (kbd "M-<down>") (concat ":m +1" (kbd "RET") "=="))
+  (define-key evil-normal-state-map (kbd "M-<up>")   (concat ":m -2" (kbd "RET") "=="))
+
   ;; set warning level
   (setq warning-minimum-level :error)
 )
